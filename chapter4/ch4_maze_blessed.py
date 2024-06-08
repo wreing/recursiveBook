@@ -55,7 +55,7 @@ def printMaze(maze):
     
     with term.cbreak(), term.hidden_cursor():
         # clear the screen
-        print(term.home + term.black_on_olivedrab4 + term.clear)
+        print(term.home + term.black_on_plum + term.clear)
     
     
         # draw !
@@ -112,7 +112,7 @@ def solveMaze(maze, x=None, y=None, visited=None):
 
 
 with term.cbreak(), term.hidden_cursor():
-    # loop every 200ms
-    #while term.inkey(timeout=0.2) != 'q':
+    # I'd like to add a keyboard interupt to allow [q] to quit even if the maze isn't
+    # solved but with the recuresive calls to print I'm not sure how to enable that
     x = solveMaze(MAZE)
 
